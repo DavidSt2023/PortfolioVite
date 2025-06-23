@@ -11,7 +11,7 @@ interface Component {
 }
 
 export function NavBar() {
-    let [components,setComponets] = useState<Component[]>([]);
+    const [components,setComponets] = useState<Component[]>([]);
 
     function inizile(){
         setComponets([
@@ -51,6 +51,16 @@ export function NavBar() {
         href: undefined,
         description: 'Explore my projects and contributions on GitHub, where I share my code and collaborate with others.',
       }
+    ]
+  },
+    {
+    header: 'About Me',
+    items: [
+      {
+        title: 'Classic Resume',
+        href: 'https://www.linkedin.com/in/your-profile',
+        description: 'Connect with me on LinkedIn to see my professional journey and network with me.'
+      },
     ]
   }
         ])

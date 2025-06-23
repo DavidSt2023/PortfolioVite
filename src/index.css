@@ -2,6 +2,26 @@
 @import "tw-animate-css";
 
 @custom-variant dark (&:is(.dark *));
+
+/* Define your custom primary color palette */
+@theme {
+  --color-primary-0:  rgb(255,255,255);
+  --color-primary-50: rgb(228,231,236);
+  --color-primary-100:rgb(202,208,218);
+  --color-primary-200:rgb(175,185,199);
+  --color-primary-300:rgb(148,162,179);
+  --color-primary-400:rgb(121,138,159);
+  --color-primary-500:rgb(95,115,140);
+  --color-primary-600:rgb(75,91,113);
+  --color-primary-700:rgb(55,67,87);
+  --color-primary-800:rgb(35,44,60);
+  --color-primary-900:rgb(15,20,33);
+  --color-primary-950:rgb(3,7,18);
+
+  --font-family-nerd: 'Geist', sans-serif;
+
+}
+
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -16,7 +36,7 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   --radius: 0.625rem;
-  --background: oklch(1 0 0);
+  --background: rgb(255, 255, 255);
   --foreground: oklch(0.13 0.028 261.692);
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.13 0.028 261.692);
@@ -71,24 +91,6 @@ h1 {
   line-height: 1.1;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
 
 @media (prefers-color-scheme: light) {
   :root {
@@ -97,9 +99,6 @@ button:focus-visible {
   }
   a:hover {
     color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
   }
 }
 
@@ -142,7 +141,7 @@ button:focus-visible {
 }
 
 .dark {
-  --background: oklch(0.13 0.028 261.692);
+  --background: rgb(3, 7, 18);
   --foreground: oklch(0.985 0.002 247.839);
   --card: oklch(0.21 0.034 264.665);
   --card-foreground: oklch(0.985 0.002 247.839);
