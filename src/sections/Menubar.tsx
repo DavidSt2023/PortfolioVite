@@ -14,6 +14,10 @@ function Menubar() {
   return (
     <div className="bg-background border-b border-border p-4 w-full fixed top-0 left-0 right-0 z-50">
       <div className="flex justify-between items-center w-full max-w-7xl mx-auto">
+          <div className="text-2xl font-bold font-mono hover:scale-105 transition-transform cursor-pointer">
+            <span className=" dark:text-white">DS</span>
+            <span className="text-primary-750 dark:text-gray-500 animate-pulse">_</span>
+          </div>
         <div className="flex-shrink-0">
           <NavBar />
         </div>
