@@ -29,51 +29,49 @@ interface SkillCategory {
 function SkillSection(): React.ReactElement  {
   const [defaultValue] = useState<string>("");
 
-  const skills: SkillCategory[] = [
-    {
-      title: 'Frameworks',
+const skills: SkillCategory[] = [
+  {
+    title: 'Frameworks',
+    sub: [
+      { item: 'React', icon: 'React', description: '4/5', reason: 'Seit 3 Jahren aktiv in Projekten eingesetzt' },
+      { item: 'Nuxt.js', icon: 'Nuxtjs', description: '2/5', reason: 'Grundkonzepte verstanden und in Projekten angewendet' },
+      { item: 'Vue.js', icon: 'Vuejs', description: '2/5', reason: 'Mit den Grundlagen vertraut und bereits praktisch genutzt' },
+      { item: 'Next.js', icon: 'Nextdotjs', description: '2/5', reason: 'Basisfunktionen kennengelernt und eingesetzt' }
+    ]
+  },
+  {
+    title: 'Languages',
+    sub: [
+      { item: 'HTML', icon: 'Html5', description: '4/5', reason: 'Fundiertes Verständnis durch erste Webprojekte' },
+      { item: 'JavaScript', icon: 'Js', description: '4/5', reason: '3 Jahrige Erfahrung durch React und Projekte' },
+      { item: 'TypeScript', icon: 'Typescript', description: '3/5', reason: 'Grundlagen verstanden und regelmäßig in privaten Projekten verwendet' },
+      { item: 'Python', icon: 'Python', description: '2/5', reason: 'Grundlegende Kenntnisse durch kleinere Projekte und Skripte' },
+      { item: 'Node.js', icon: 'Node', description: '2/5', reason: 'Basiswissen vorhanden, aber wenig praktische Erfahrung' },
+      { item: 'Java', icon: 'Java', description: '3/5', reason: 'In der Berufsschule gelernt und in Übungen angewendet' }
+    ]
+  },
+  {
+    title: 'Styling & UI',
+    sub: [
+      { item: 'Tailwind CSS', icon: 'Tailwindcss', description: '3/5', reason: 'Aktiv in Projekten eingesetzt, aber noch nicht in allen Aspekten vertraut' },
+      { item: 'CSS', icon: 'Css', description: '3/5', reason: 'Gute Kenntnisse durch Webprojekte' },
+      { item: 'Material UI', icon: 'Mui', description: '3/5', link: 'https://mui.com/',reason: 'Regelmäßig in React-Projekten verwendet' },
+      { item: 'AgGrid', icon: 'Table', description: '4/5', link: 'https://www.ag-grid.com/',reason: 'Intensiv in Projekten genutzt, insbesondere für komplexe Datenvisualisierungen' },
+    ]
+  },
+  {
+    title: 'Tools & DevOps',
+    sub: [
+      { item: 'Git', icon: 'Git', description: '2/5', reason: 'Grundkenntnisse vorhanden, aber wenig praktische Erfahrung' },
+      { item: 'Microsoft Azure SQL', icon: 'Azure', description: '4/5', reason: 'Seit 3 Jahren regelmäßig in der Arbeit genutzt' },
+      { item: 'Jest', icon: 'Jest', description: '2/5', reason: 'Kenntnis durch Webspracing Projekt' },
+      { item: 'NPM', icon: 'Npm', description: '3/5', reason: 'Regelmäßig in Projekten verwendet, aber noch nicht in allen Aspekten vertraut' },
+      { item: 'Shell', icon: 'Terminal', description: '2/5', reason: 'Grundlegende Kenntnisse in der Shell-Nutzung & NeoVim, aber noch nicht in allen Aspekten vertraut' },
+      { item: 'NeoVim', icon: 'Neovim', description: '3/5', reason: 'Setze ich aktiv für Projekte ein, inkl. eigener Konfigurationen zum Lernen von Vim' }
+    ]
+  }
+];
 
-      sub: [
-        { item: 'React', icon: 'React', description: '4/5', reason: '3 Jahre mit React aktiv gearbeitet' },
-        { item: 'Nuxt.js', icon: 'Nuxtjs', description: '3/5', reason: 'Grundlegendes Konzept verstanden und benutzt' },
-        { item: 'Vue.js', icon: 'Vuejs', description: '3/5', reason: 'Grundlegendes Konzept verstanden und benutzt' },
-        { item: 'Next.js', icon: 'Nextdotjs', description: '2/5', reason: 'Grundlegendes Konzept verstanden und benutzt' }
-      ]
-    },
-    {
-      title: 'Languages',
-
-      sub: [
-        { item: 'HTML', icon: 'Html5', description: '4/5', reason: 'Verständnis durch erste Projekte' },
-        { item: 'JavaScript', icon: 'Js', description: '4/5', reason: '3 Jahre mit React aktiv gearbeitet und private Projekte eingebunden' },
-        { item: 'TypeScript', icon: 'Typescript', description: '3/5', reason: 'Grundverständnis vorhanden & in privaten Projekten benutzt' },
-        { item: 'Python', icon: 'Python', description: '2/5' },
-        { item: 'Node.js', icon: 'Node', description: '3/5' },
-        { item: 'Java', icon: 'Java', description: '3/5' }
-      ]
-    },
-    {
-      title: 'Styling & UI',
- 
-      sub: [
-        { item: 'Tailwind CSS', icon: 'Tailwindcss', description: '3/5' },
-        { item: 'CSS', icon: 'Css', description: '3/5' },
-        { item: 'Material UI', icon: 'Mui', description: '3/5', link: 'https://mui.com/' },
-        { item: 'AgGrid', icon: 'Table', description: '4/5', link: 'https://www.ag-grid.com/' }
-      ]
-    },
-    {
-      title: 'Tools & DevOps',
-      sub: [
-        { item: 'Git', icon: 'Git', description: '2/5' },
-        { item: 'Microsoft Azure SQL', icon: 'Azure', description: '4/5', reason: '3-jährige Erfahrung im Arbeitsumfeld' },
-        { item: 'Jest', icon: 'Jest', description: '3/5' },
-        { item: 'NPM', icon: 'Npm', description: '3/5' },
-        { item: 'Shell', icon: 'Terminal', description: '3/5' },
-        { item: 'NeoVim', icon: 'Neovim', description: '3/5', reason: 'Benutze ich für meine Projekte und zum Lernen von Vim & Bau eigener Configs' }
-      ]
-    }
-  ];
 
   return (
     <section id="skills" className="py-20">
@@ -86,7 +84,7 @@ function SkillSection(): React.ReactElement  {
           {skills.map((skill) => (
             <Card 
               key={skill.title}
-              className="dark:bg-primary-950 text-center hover:transform hover:scale-105 transition-all duration-300"
+              className="bg-primary-50 dark:bg-primary-900 text-center hover:transform hover:scale-105 transition-all duration-300"
             >
               <CardHeader> 
                 <CardTitle className="flex items-center justify-center gap-2">
@@ -101,11 +99,11 @@ function SkillSection(): React.ReactElement  {
                         <div className="flex items-center gap-2">
                           {getIcon(item.icon)}
                           <span>{item.item}</span>
-                          <span className="text-sm text-muted-foreground">({item.description})</span>
+                          <span className="text-sm text-muted-foreground ">({item.description})</span>
                         </div>
                       </AccordionTrigger>
                       <AccordionContent className="text-left text-sm text-muted-foreground">
-                        {item.reason || 'Grundlegende Kenntnisse vorhanden'}
+                        <p>{item.reason}  </p>
                         {item.link && (
                           <div className="mt-2">
                             <a 

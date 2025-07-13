@@ -1,5 +1,4 @@
 import { Button } from "@/components/ui/button";
-import { ArrowDown } from 'lucide-react';
 function HomeHeader(){
 const name = 'David Stemmler'
 const description = 'Ich erstelle moderne Webanwendungen mit den neuesten Technologien und leidenschaftlichem Design.'
@@ -13,10 +12,10 @@ const scrollToSkills = () => {
     return(
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
       <div className="animate-fade-in">
-        <h1 className="text-5xl md:text-7xl font-bold mb-6 dark:text-white text-gray-900">
-          Hallo, ich bin <span className="text-gray-400">{name }</span>
+        <h1 className="text-5xl md:text-7xl font-bold mb-6 dark:text-primary-50 text-gray-900">
+          Hallo, ich bin <span className="text-gray-500">{name }</span>
         </h1>
-        <p className="text-xl md:text-2xl mb-8 text-gray-500 max-w-3xl mx-auto">
+        <p className="text-xl md:text-2xl mb-8  max-w-3xl mx-auto">
           { description }
         </p>        
         <div className="flex flex-col sm:flex-row gap-4 justify-center">

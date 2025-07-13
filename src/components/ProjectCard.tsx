@@ -20,10 +20,10 @@ interface ProjectCardProps {
 
 function ProjectCard ({ name, tech, description, Doc, github, demo }: ProjectCardProps) {
     return(
-        <Card className="dark:bg-primary-950 hover:transform hover:scale-105 transition-all duration-300">
+        <Card className="bg-primary-50 dark:bg-primary-900 hover:transform hover:scale-105 transition-all duration-300">
             <CardContent className="p-6">
-                <CardTitle className="text-xl font-bold mb-2">{name}</CardTitle>
-                <CardDescription className="text-muted-foreground mb-4">
+                <CardTitle className="text-xl font-bold mb-2 text-gray-900 dark:text-primary-100">{name}</CardTitle>
+                <CardDescription className="mb-4 text-gray-800 dark:text-primary-200">
                     {description}
                 </CardDescription>
                 <div className="mb-4">
