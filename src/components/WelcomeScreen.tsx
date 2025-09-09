@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 
 function WelcomeScreen() {
   const [showContent, setShowContent] = useState(false);
@@ -34,7 +34,7 @@ function WelcomeScreen() {
       y: -100,
       transition: {
         duration: 1,
-        ease: "easeInOut"
+        ease: "easeInOut" as const
       }
     }
   };
@@ -50,7 +50,7 @@ function WelcomeScreen() {
       y: 0,
       rotateX: 0,
       transition: {
-        type: "spring",
+        type: "spring" as const,
         damping: 12,
         stiffness: 200
       }
@@ -68,7 +68,7 @@ function WelcomeScreen() {
       transition: {
         duration: 3,
         times: [0, 0.3, 0.7, 1],
-        ease: "easeInOut"
+        ease: "easeInOut" as const
       }
     }
   };
