@@ -24,13 +24,14 @@ import {
   SiGo,
   SiMapbox,
   SiShadcnui,
-  SiFramework
+  SiFramework,
+  SiVite
 } from 'react-icons/si';
 import { MdWeb, MdPalette, MdBuild } from 'react-icons/md';
 import { BiServer, BiTable, BiTerminal } from 'react-icons/bi';
 import { VscAzure } from "react-icons/vsc";
 import { HiOutlineBookOpen } from "react-icons/hi";
-import  ViteLogo  from '../assets/Vitejs.svg';
+
 import { FaRegClock } from "react-icons/fa6";
 interface IconConfig {
   size?: string;
@@ -74,8 +75,8 @@ const iconMap: { [key: string]: (config?: IconConfig) => React.ReactElement } = 
   'Golang': (config) => <SiGo className={config?.size || "w-4 h-4"} />,
   'Vue.js': (config) => <FaVuejs className={config?.size || "w-4 h-4"} />,
   'Tailwind CSS': (config) => <SiTailwindcss className={config?.size || "w-4 h-4"} />,
-  'Vite': () => <ViteLogo />,
-  
+  'Vite': (config) => <SiVite className={config?.size || "w-4 h-4"} />,
+
   // Action Icons
   'Github': (config) => <FaGithub className={config?.size || "w-4 h-4"} />,
   'ExternalLink': (config) => <FaExternalLinkAlt className={config?.size || "w-4 h-4"} />,
