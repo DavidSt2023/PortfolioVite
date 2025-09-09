@@ -4,16 +4,17 @@ import SkillSection from "@/sections/SkillSection";
 import ProjectSection from "@/sections/ProjectSection";
 import Footer from "@/sections/Footer";
 import './App.css'
+import { BackgroundBeams } from "@/components/ui/shadcn-io/background-beams";
 function App() {
 
 
   return (
     <>
-      
-      <div className={`min-h-screen bg-background text-foreground transition-all duration-1000`}>
+    <div className="relative">
+      <BackgroundBeams className="absolute inset-0" />
+      <div className="relative z-10">
         {/* Menubar outside the gap container */}
         <Menubar />
-        
         {/* Content with gap applied only between these elements */}
         <div className="pt-40 gap-40 flex flex-col">
           <div className={`transition-all duration-1000 delay-300 `}>
@@ -29,6 +30,7 @@ function App() {
             <Footer/>
           </div>
         </div>
+      </div>
       </div>
     </>
   )

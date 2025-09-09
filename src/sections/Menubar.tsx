@@ -34,7 +34,7 @@ function Menubar() {
           <div>
             <Button
               variant="ghost"
-              onClick={() => alert("User Profile")}
+              onClick={() => alert("Login work in progress")}
             ><UserRound /></Button>
           </div>
         </div>

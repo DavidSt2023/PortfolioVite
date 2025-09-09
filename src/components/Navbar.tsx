@@ -53,16 +53,16 @@ export function NavBar() {
       }
     ]
   },
-    {
-    header: 'About Me',
-    items: [
-      {
-        title: 'Classic Resume',
-        href: 'https://www.linkedin.com/in/your-profile',
-        description: 'Connect with me on LinkedIn to see my professional journey and network with me.'
-      },
-    ]
-  }
+  //   {
+  //   header: 'About Me',
+  //   items: [
+  //     {
+  //       title: 'Classic Resume',
+  //       href: 'https://www.linkedin.com/in/your-profile',
+  //       description: 'Connect with me on LinkedIn to see my professional journey and network with me.'
+  //     },
+  //   ]
+  // }
         ])
     }
     useEffect(() => {
@@ -76,8 +76,8 @@ export function NavBar() {
         <NavigationMenuTrigger className="cursor-pointer scroll-m-20  font-bold tracking-tight">
           { component.header }
         </NavigationMenuTrigger>
-        <NavigationMenuContent className="w-[400px] md:w-[500px] lg:w-[600px] bg-primary-50 dark:bg-primary-900 rounded-md shadow-lg">
-          <ul className="grid gap-1 p-2 md:w-[400px] lg:w-[500px] lg:grid-cols-[minmax(0,.75fr)_minmax(0,1fr)]">
+        <NavigationMenuContent className="w-[400px] md:w-[400px] lg:w-[400px] bg-primary-50 dark:bg-primary-900 rounded-md shadow-lg">
+          <ul className="flex flex-col items-center gap-1 p-2 w-full">
             {component.items.map((el,i)=> { return (<li  key={"itemIndex" + i}>
               <NavigationMenuLink className="hover:bg-muted/80 transition-colors duration-200 " asChild>
                 <a

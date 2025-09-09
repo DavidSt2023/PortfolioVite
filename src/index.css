@@ -5,20 +5,17 @@
 
 /* Define your custom primary color palette based on your gradients */
 @theme {
-  /* Light mode palette - derived from #cfd9df to #e2ebf0 */
-  --color-primary-0:  rgb(255,255,255);
-  --color-primary-50: rgb(226,235,240); /* #e2ebf0 - lightest from your gradient */
-  --color-primary-100:rgb(215,228,235);
-  --color-primary-200:rgb(207,217,223); /* #cfd9df - darkest from your light gradient */
-  --color-primary-300:rgb(195,205,215);
-  --color-primary-400:rgb(180,193,207);
-  --color-primary-500:rgb(165,180,198);
-  --color-primary-600:rgb(145,165,185);
-  --color-primary-700:rgb(120,140,165);
-  --color-primary-800:rgb(67,67,67);     /* #434343 - darkest from your dark gradient */
-  --color-primary-900:rgb(35,35,35);
-  --color-primary-950:rgb(0,0,0);        /* black - from your dark gradient */
-
+  --color-primary-50: hsl(60 9.1% 97.8%);
+  --color-primary-100:hsl(60 4.8% 95.9%);
+  --color-primary-200:hsl(20 5.9% 90%);
+  --color-primary-300:hsl(24 5.7% 82.9%);
+  --color-primary-400:hsl(24 5.4% 63.9%);
+  --color-primary-500:hsl(25 5.3% 44.7%);
+  --color-primary-600:hsl(33.3 5.5% 32.4%);
+  --color-primary-700:hsl(30 6.3% 25.1%);
+  --color-primary-800:hsl(12 6.5% 15.1%);
+  --color-primary-900:hsl(24 9.8% 10%);
+  --color-primary-950:hsl(20 14.3% 4.1%);
   --font-family-nerd: 'Geist', sans-serif;
 }
 
@@ -28,14 +25,13 @@
   font-weight: 400;
   width: 100%;
   color-scheme: light dark;
-  
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   --radius: 0.625rem;
-  
+
   --text-color: var(--color-primary-900);
   --background-gradient: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
   --background: rgb(226, 235, 240); /* Light gradient end color */
@@ -73,13 +69,15 @@
 
 a {
   font-weight: 500;
-  color: rgb(67, 67, 67);
+  color: var(--text-color);
   text-decoration: inherit;
+  transition: all 0.2s ease-in-out;
 }
 a:hover {
-  color: rgb(35, 35, 35);
+  color: var(--text-color);
+  opacity: 1;
+  text-shadow: 0 0 1px var(--primary);
 }
-
 
 body {
   margin: 0;
@@ -139,6 +137,7 @@ h1 {
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
+  --animate-spin:  spin 2s linear infinite;
 }
 
 .dark {
@@ -187,7 +186,7 @@ h1 {
     background-image: var(--background-gradient);
     min-height: 100vh;
   }
-  
+
   p{
     color: var(--text-color);
   }

@@ -1,11 +1,27 @@
 import { Button } from "@/components/ui/button";
+import { useEffect, useState } from "react";
+import { intervalToDuration, type Duration} from 'date-fns';
 function HomeHeader(){
 const name = 'David Stemmler'
-const description = 'Ich erstelle moderne Webanwendungen mit den neuesten Technologien und leidenschaftlichem Design.'
+const descriptionText = `Ich bin aktuell noch in meiner Ausbildung aber entwickel auch leidenschaftlich in meiner Freizeit.`
+const abschlussDatum = new Date('2026-01-01T00:00:00'); 
+const [finishTime, setFinishTime] = useState<Duration>(intervalToDuration({
+        start: new Date(),
+        end: abschlussDatum,
+      }));
 
-const scrollToProjects = () => {
-  document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })
-}
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      setFinishTime(intervalToDuration({
+        start: new Date(),
+        end: abschlussDatum,
+      }));
+    }, 900);
+    return () => {
+      clearInterval(intervalId);
+    };
+  },);
+
 const scrollToSkills = () => {
   document.getElementById('skills')?.scrollIntoView({ behavior: 'smooth' })
 }
@@ -16,16 +32,12 @@ const scrollToSkills = () => {
           Hallo, ich bin <span className="text-gray-500">{name }</span>
         </h1>
         <p className="text-xl md:text-2xl mb-8  max-w-3xl mx-auto">
-          { description }
+          {descriptionText}<br/><br/>
+          {<span>Meine Abschluss mache ich in :<br/>{finishTime.months ? `${finishTime.months} Monate, ` : null}{finishTime.days ? `${finishTime.days} Tage, ` : null}{finishTime.hours ? `${finishTime.hours} Stunden, ` : null}{finishTime.minutes ? `${finishTime.minutes} Minuten und ` : null}{finishTime.seconds ? `${finishTime.seconds} Sekunden` : `0`}</span>}
+          <br/>
+          (Abschluss Termin Januar 2026)
         </p>        
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Button 
-            size="lg" 
-            onClick={scrollToProjects}
-            className="transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 "
-          >
-            Projekte ansehen
-          </Button>
             <Button 
             size="lg" 
             onClick={scrollToSkills}
@@ -35,9 +47,6 @@ const scrollToSkills = () => {
           </Button>
         </div>
       </div>
-      {/* <div className="mt-12 animate-bounce ">
-        <ArrowDown  className="w-8 h-8 mx-auto" />
-      </div> */}
     </div>
     )
 }

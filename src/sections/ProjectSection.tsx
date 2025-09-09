@@ -5,30 +5,23 @@ interface Project {
   name: string;
   description: string;
   tech: string[];
-  Doc: string;
-  github: string;
-  demo: string;
+  doc: string | undefined;
+  github: string | undefined;
+  demo: string | undefined;
+  hours?: number;
 }
 
 function ProjectSection() {
   const projects: Project[] = [
     {
       id: 1,
-      name: 'Live Tracking Map',
-      description: 'Eine moderne E-Commerce-Plattform mit Vue.js und Nuxt.js entwickelt.',
-      tech: ['Tailwind CSS','Mapbox'],
-      Doc: 'https://docs.com',
-      github: 'https://github.com',
-      demo: 'https://demo.com'
-    },
-    {
-      id: 2,
       name: 'Portfolio Website',
       description: 'Eine responsive Portfolio-Website mit modernem Design.',
-      tech: ['React', 'shadcn', 'Tailwind CSS'],
-      Doc: 'https://docs.com',
+      tech: ['React', 'shadcn', 'Tailwind CSS', 'Vite', 'Typescript'],
       github: 'https://github.com',
-      demo: 'https://demo.com'
+      demo: undefined,
+      doc: undefined,
+      hours: 40,
     }
   ];
 
@@ -46,9 +39,10 @@ function ProjectSection() {
               name={project.name}
               tech={project.tech}
               description={project.description}
-              Doc={project.Doc}
+              doc={project.doc}
               github={project.github}
               demo={project.demo}
+              hours={project.hours}
             />
           </div>
         ))}

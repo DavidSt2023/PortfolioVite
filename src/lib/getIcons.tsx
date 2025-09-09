@@ -30,7 +30,8 @@ import { MdWeb, MdPalette, MdBuild } from 'react-icons/md';
 import { BiServer, BiTable, BiTerminal } from 'react-icons/bi';
 import { VscAzure } from "react-icons/vsc";
 import { HiOutlineBookOpen } from "react-icons/hi";
-
+import { ReactComponent as ViteLogo } from '../assets/Vitejs.svg';
+import { FaRegClock } from "react-icons/fa6";
 interface IconConfig {
   size?: string;
   color?: string;
@@ -44,6 +45,7 @@ const iconMap: { [key: string]: (config?: IconConfig) => React.ReactElement } = 
   'Server': (config) => <BiServer className={config?.size || "w-6 h-6"} />,
   'Palette': (config) => <MdPalette className={config?.size || "w-6 h-6"} />,
   'Build': (config) => <MdBuild className={config?.size || "w-6 h-6"} />,
+  'Clock': (config) => <FaRegClock className={config?.size || "w-5 h-5"} />,
   
   // Tech Icons (mit Farben)
   'React': (config) => <FaReact className={`${config?.size || "w-5 h-5"} ${config?.color || "text-blue-500"}`} />,
@@ -72,6 +74,7 @@ const iconMap: { [key: string]: (config?: IconConfig) => React.ReactElement } = 
   'Golang': (config) => <SiGo className={config?.size || "w-4 h-4"} />,
   'Vue.js': (config) => <FaVuejs className={config?.size || "w-4 h-4"} />,
   'Tailwind CSS': (config) => <SiTailwindcss className={config?.size || "w-4 h-4"} />,
+  'Vite': (config) => <ViteLogo className={config?.size || "w-4 h-4"} />,
   
   // Action Icons
   'Github': (config) => <FaGithub className={config?.size || "w-4 h-4"} />,

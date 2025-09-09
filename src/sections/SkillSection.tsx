@@ -110,7 +110,7 @@ const skills: SkillCategory[] = [
                               href={item.link} 
                               target="_blank" 
                               rel="noopener noreferrer"
-                              className="text-blue-500 hover:underline"
+                              className="hover:underline [color:var(--text-color)]"
                             >
                               Mehr erfahren →
                             </a>
