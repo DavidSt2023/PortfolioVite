@@ -10,4 +10,15 @@
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
+<script>
+  // Initialize dark mode immediately to prevent flash
+  (function() {
+    const savedTheme = localStorage.getItem('theme');
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    
+    if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
+      document.documentElement.classList.add('dark');
+    }
+  })();
+</script>
 </html>
