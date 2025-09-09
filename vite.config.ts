@@ -5,6 +5,7 @@ import { defineConfig } from "vite"
 import svgr from '@svgr/rollup';
 // https://vite.dev/config/
 export default defineConfig({
+  base: '/PortfolioVite/',
   plugins: [react(), tailwindcss(),svgr()],
   resolve: {
     alias: {
