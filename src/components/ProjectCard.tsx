@@ -11,6 +11,7 @@ import { getIcon } from "@/lib/getIcons";
 import { Separator } from "@/components/ui/separator"
 interface ProjectCardProps {
   name: string;
+  icon:string;
   tech: string[];
   description?: string;
   doc?: string;
@@ -19,11 +20,11 @@ interface ProjectCardProps {
   hours?: number;
 }
 
-function ProjectCard ({ name, tech, description, doc, github, demo, hours }: ProjectCardProps) {
+function ProjectCard ({ name,icon, tech, description, doc, github, demo, hours }: ProjectCardProps) {
     return(
         <Card className="bg-primary-50 dark:bg-primary-900 hover:transform hover:scale-105 transition-all duration-300">
             <CardContent className="p-6">
-                <CardTitle className="text-xl font-bold mb-2 text-gray-900 dark:text-primary-100">{name}</CardTitle>
+                <CardTitle className="text-xl font-bold mb-2 text-gray-900 dark:text-primary-100"><div className="flex flex-row gap-4 justify-center">{getIcon(icon)}{name}</div></CardTitle>
                 <CardDescription className="mb-4 text-gray-800 dark:text-primary-200">
                     {description}
                 </CardDescription>

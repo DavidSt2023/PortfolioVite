@@ -1,7 +1,9 @@
 import ProjectCard from "@/components/ProjectCard";
 
+
 interface Project {
   id: number;
+  icon: string;
   name: string;
   description: string;
   tech: string[];
@@ -15,13 +17,25 @@ function ProjectSection() {
   const projects: Project[] = [
     {
       id: 1,
+      icon:"Vite",
       name: 'Portfolio Website',
       description: 'Eine responsive Portfolio-Website mit modernem Design.',
       tech: ['React', 'shadcn', 'Tailwind CSS', 'Vite', 'Typescript'],
-      github: 'https://github.com',
+      github: 'https://github.com/DavidSt2023/PortfolioVite',
       demo: undefined,
       doc: undefined,
       hours: 40,
+    },
+    {
+      id: 2,
+      icon:"Neovim",
+      name: 'Neovim Config',
+      description: 'In diesem Projekt habe ich gelernt, wie man mit Lua umgeht und sich allgemein in der Arbeit mit Vim zurechtfindet.',
+      tech: ['Lua', 'Neovim'],
+      github: 'https://github.com/DavidSt2023/NeoVimConfigs',
+      demo: undefined,
+      doc: undefined,
+      hours: 30,
     }
   ];
 
@@ -35,8 +49,9 @@ function ProjectSection() {
       <div className="flex flex-wrap justify-center gap-8">
         {projects.map((project) => (
           <div key={project.id} className="w-full max-w-sm">
-            <ProjectCard 
+            <ProjectCard
               name={project.name}
+              icon={project.icon}
               tech={project.tech}
               description={project.description}
               doc={project.doc}

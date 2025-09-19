@@ -34,21 +34,21 @@ export function NavBar() {
   //   ]
   // },
   {
-    header: 'Contact',
+    header: 'About Me',
     items: [
       {
         title: 'LinkIn ',
-        href: 'https://www.linkedin.com/in/your-profile',
+        href: 'https://www.linkedin.com/in/david-stemmler-1a8950380',
         description: 'Connect with me on LinkedIn to see my professional journey and network with me.'
       },
       {
         title: 'Email',
-        href: undefined,
+        href: "mailto:David.Stemmler@outlook.com",
         description: 'If you have any questions or want to collaborate, feel free to reach out via email.',
       },
       {
         title: 'Github',
-        href: undefined,
+        href: "https://github.com/DavidSt2023",
         description: 'Explore my projects and contributions on GitHub, where I share my code and collaborate with others.',
       }
     ]
@@ -82,7 +82,8 @@ export function NavBar() {
               <NavigationMenuLink className="hover:bg-muted/80 transition-colors duration-200 " asChild>
                 <a
                   className="flex h-full w-full select-none flex-col justify-end rounded-md  p-6 no-underline outline-none focus:shadow-md transition-all duration-300 ease-in-out hover:scale-110 hover:bg-primary-100 dark:hover:bg-primary-800"
-                  href="item.href"
+                  href={el.href}
+                  target="_blank"
                 >
                     <span className="font-semibold text-primary-900 underline decoration-solid underline-offset-4 dark:text-primary-50">{ el.title }</span>
                   <p className="text-sm text-primary-800 dark:text-primary-300">{ el.description }</p>

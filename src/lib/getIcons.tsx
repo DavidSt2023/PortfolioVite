@@ -25,13 +25,13 @@ import {
   SiMapbox,
   SiShadcnui,
   SiFramework,
-  SiVite
+  SiLua
 } from 'react-icons/si';
 import { MdWeb, MdPalette, MdBuild } from 'react-icons/md';
 import { BiServer, BiTable, BiTerminal } from 'react-icons/bi';
 import { VscAzure } from "react-icons/vsc";
 import { HiOutlineBookOpen } from "react-icons/hi";
-
+import ViteSvg from '@/assets/Vitejs.svg';
 import { FaRegClock } from "react-icons/fa6";
 interface IconConfig {
   size?: string;
@@ -75,8 +75,8 @@ const iconMap: { [key: string]: (config?: IconConfig) => React.ReactElement } = 
   'Golang': (config) => <SiGo className={config?.size || "w-4 h-4"} />,
   'Vue.js': (config) => <FaVuejs className={config?.size || "w-4 h-4"} />,
   'Tailwind CSS': (config) => <SiTailwindcss className={config?.size || "w-4 h-4"} />,
-  'Vite': (config) => <SiVite className={config?.size || "w-4 h-4"} />,
-
+  'Vite': (_) => <img style={{height:'13px', width:"auto"}} src={ViteSvg}  />,
+  'Lua': (config) => <SiLua className={config?.size || "w-4 h-4"} color='blue'/>,
   // Action Icons
   'Github': (config) => <FaGithub className={config?.size || "w-4 h-4"} />,
   'ExternalLink': (config) => <FaExternalLinkAlt className={config?.size || "w-4 h-4"} />,
@@ -92,7 +92,7 @@ export const getIcon = (iconName: string, config?: IconConfig): React.ReactEleme
   }
   
   // Fallback für unbekannte Icons
-  return <span className={config?.size || "w-5 h-5"}>?</span>;
+  return <span className={config?.size || "w-5 h-5"}></span>;
 };
 
 export type IconName = keyof typeof iconMap;

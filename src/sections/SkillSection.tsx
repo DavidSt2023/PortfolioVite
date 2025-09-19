@@ -33,44 +33,46 @@ const skills: SkillCategory[] = [
   {
     title: 'Frameworks',
     sub: [
-      { item: 'React', icon: 'React', description: '4/5', reason: 'Seit 3 Jahren aktiv in Projekten eingesetzt' },
-      { item: 'Nuxt.js', icon: 'Nuxtjs', description: '2/5', reason: 'Grundkonzepte verstanden und in Projekten angewendet' },
-      { item: 'Vue.js', icon: 'Vuejs', description: '2/5', reason: 'Mit den Grundlagen vertraut und bereits praktisch genutzt' },
-      { item: 'Next.js', icon: 'Nextdotjs', description: '2/5', reason: 'Basisfunktionen kennengelernt und eingesetzt' }
+      { item: 'React', icon: 'React', description: '4/5', reason: 'Seit 3 Jahren aktiv in Projekten eingesetzt und umfassende Erfahrungen gesammelt.' },
+      { item: 'Nuxt.js', icon: 'Nuxtjs', description: '2/5', reason: 'Grundkonzepte verstanden und erfolgreich in Projekten angewendet.' },
+      { item: 'Vue.js', icon: 'Vuejs', description: '2/5', reason: 'Vertraut mit den Grundlagen und praktische Erfahrungen in Projekten gesammelt.' },
+      { item: 'Next.js', icon: 'Nextdotjs', description: '2/5', reason: 'Kenntnis der Basisfunktionen und Anwendung in verschiedenen Projekten.' }
     ]
   },
   {
     title: 'Languages',
     sub: [
-      { item: 'HTML', icon: 'Html5', description: '4/5', reason: 'Fundiertes Verständnis durch erste Webprojekte' },
-      { item: 'JavaScript', icon: 'Js', description: '4/5', reason: '3 Jahrige Erfahrung durch React und Projekte' },
-      { item: 'TypeScript', icon: 'Typescript', description: '3/5', reason: 'Grundlagen verstanden und regelmäßig in privaten Projekten verwendet' },
-      { item: 'Python', icon: 'Python', description: '2/5', reason: 'Grundlegende Kenntnisse durch kleinere Projekte und Skripte' },
-      { item: 'Node.js', icon: 'Node', description: '2/5', reason: 'Basiswissen vorhanden, aber wenig praktische Erfahrung' },
-      { item: 'Java', icon: 'Java', description: '3/5', reason: 'In der Berufsschule gelernt und in Übungen angewendet' }
+      { item: 'HTML', icon: 'Html5', description: '4/5', reason: 'Fundiertes Verständnis durch die Entwicklung erster Webprojekte.' },
+      { item: 'JavaScript', icon: 'Js', description: '4/5', reason: '3 Jahre Erfahrung durch den Einsatz in React-Projekten und anderen Anwendungen.' },
+      { item: 'TypeScript', icon: 'Typescript', description: '3/5', reason: 'Gute Kenntnisse der Grundlagen und regelmäßiger Einsatz in privaten Projekten.' },
+      { item: 'Python', icon: 'Python', description: '2/5', reason: 'Grundkenntnisse durch kleinere Projekte und Skripte erworben.' },
+      { item: 'Node.js', icon: 'Node', description: '2/5', reason: 'Vertraut mit den Basisfunktionen, aber mit begrenzter praktischer Erfahrung.' },
+      { item: 'Java', icon: 'Java', description: '2/5', reason: 'Grundlagen in der Berufsschule erlernt und in praktischen Übungen angewendet.' }
     ]
   },
   {
     title: 'Styling & UI',
     sub: [
-      { item: 'Tailwind CSS', icon: 'Tailwindcss', description: '3/5', reason: 'Aktiv in Projekten eingesetzt, aber noch nicht in allen Aspekten vertraut' },
-      { item: 'CSS', icon: 'Css', description: '3/5', reason: 'Gute Kenntnisse durch Webprojekte' },
-      { item: 'Material UI', icon: 'Mui', description: '3/5', link: 'https://mui.com/',reason: 'Regelmäßig in React-Projekten verwendet' },
-      { item: 'AgGrid', icon: 'Table', description: '4/5', link: 'https://www.ag-grid.com/',reason: 'Intensiv in Projekten genutzt, insbesondere für komplexe Datenvisualisierungen' },
+      { item: 'Tailwind CSS', icon: 'Tailwindcss', description: '3/5', reason: 'Aktiv in Projekten eingesetzt, aber noch nicht in allen fortgeschrittenen Funktionen vertraut.' },
+      { item: 'CSS', icon: 'Css', description: '3/5', reason: 'Gute Kenntnisse durch Webprojekte, jedoch wenig Erfahrung mit Animationen und Farbgestaltung.' },
+      { item: 'Material UI', icon: 'Mui', description: '3/5', link: 'https://mui.com/', reason: 'Regelmäßiger Einsatz in React-Projekten.' },
+      { item: 'Shadcn', icon: 'shadcn', description: '3/5', link: 'https://ui.shadcn.com/', reason: 'Regelmäßiger Einsatz in React-Projekten.' },
+      { item: 'AgGrid', icon: 'Table', description: '4/5', link: 'https://www.ag-grid.com/', reason: 'Intensiver Einsatz in Projekten, insbesondere zur komplexen Datenvisualisierung.' }
     ]
   },
   {
     title: 'Tools & DevOps',
     sub: [
-      { item: 'Git', icon: 'Git', description: '2/5', reason: 'Grundkenntnisse vorhanden, aber wenig praktische Erfahrung' },
-      { item: 'Microsoft Azure SQL', icon: 'Azure', description: '4/5', reason: 'Seit 3 Jahren regelmäßig in der Arbeit genutzt' },
-      { item: 'Jest', icon: 'Jest', description: '2/5', reason: 'Kenntnis durch Webspracing Projekt' },
-      { item: 'NPM', icon: 'Npm', description: '3/5', reason: 'Regelmäßig in Projekten verwendet, aber noch nicht in allen Aspekten vertraut' },
-      { item: 'Shell', icon: 'Terminal', description: '2/5', reason: 'Grundlegende Kenntnisse in der Shell-Nutzung & NeoVim, aber noch nicht in allen Aspekten vertraut' },
-      { item: 'NeoVim', icon: 'Neovim', description: '3/5', reason: 'Setze ich aktiv für Projekte ein, inkl. eigener Konfigurationen zum Lernen von Vim' }
+      { item: 'Git', icon: 'Git', description: '2/5', reason: 'Grundkenntnisse vorhanden, jedoch wenig Erfahrung mit fortgeschrittenen Git-Kommandos.' },
+      { item: 'Microsoft Azure SQL', icon: 'Azure', description: '4/5', reason: 'Regelmäßiger Einsatz im beruflichen Umfeld seit 3 Jahren.' },
+      { item: 'Jest', icon: 'Jest', description: '2/5', reason: 'Kenntnisse durch den Einsatz in Webscripting-Projekten.' },
+      { item: 'NPM', icon: 'Npm', description: '3/5', reason: 'Regelmäßiger Gebrauch in Projekten, aber noch nicht in allen Aspekten vertraut.' },
+      { item: 'Shell', icon: 'Terminal', description: '2/5', reason: 'Grundkenntnisse in der Nutzung der Shell und NeoVim, jedoch noch ausbaufähig.' },
+      { item: 'NeoVim', icon: 'Neovim', description: '3/5', reason: 'Aktiver Einsatz in Projekten mit eigenen Konfigurationen und intensiven Lernprozessen.' }
     ]
   }
 ];
+
 
 
   return (
